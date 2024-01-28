@@ -37,11 +37,3 @@ resource "aws_instance" "main" {
   user_data              = file("${path.module}/userdata.sh")
 
 }
-
-#resource "aws_route53_record" "main" {
-  #zone_id = var.zone_id
-  #name    = "rabbitmq-${var.env}"
-  #type    = "A"
-  #ttl     = 30
-  #records = [aws_instance.main.private_ip]
-#}
